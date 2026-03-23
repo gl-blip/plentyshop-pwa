@@ -7,12 +7,11 @@ import { paths } from './app/utils/paths';
 import settingsConfig from './app/configuration/settings.config';
 import featureFlagsConfig from './app/configuration/feature-flags.config';
 import { FailOnLargeChunksPlugin } from './app/configuration/vite.config';
-
 export default defineNuxtConfig({
   srcDir: 'app/',
   telemetry: false,
   devtools: { enabled: true },
-    css: ['~/assets/richtext.css', '~/assets/style.scss'],
+  css: ['~/assets/richtext.css', '~/assets/style.scss'],
   typescript: {
     typeCheck: true,
   },
@@ -21,8 +20,8 @@ export default defineNuxtConfig({
     asyncContext: true,
   },
   appConfig: {
-    titleSuffix: process.env.NAME || 'PlentyONE Shop',
-    fallbackCurrency: 'GBP',
+    titleSuffix: process.env.NAME || 'Ovatics Shop',
+    fallbackCurrency: 'EUR',
   },
   imports: {
     dirs: ['~/composables', '~/composables/**', '~/utils/**'],
@@ -123,7 +122,7 @@ export default defineNuxtConfig({
     public: {
       domain: validateApiUrl(process.env.API_URL) ?? process.env.API_ENDPOINT,
       apiEndpoint: process.env.API_ENDPOINT,
-      activeLanguages: process.env.LANGUAGELIST || 'en,de',
+      activeLanguages: process.env.LANGUAGELIST || 'de,en',
       disabledEditorSettings: process.env?.ENABLE_ALL_EDITOR_SETTINGS === '1' ? [] : ['shop-search'],
       cookieGroups: cookieConfig,
       turnstileSiteKey: process.env?.CLOUDFLARETURNSTILEAPISITEKEY ?? '',
@@ -165,7 +164,7 @@ export default defineNuxtConfig({
     },
   },
   plentySitemap: {
-    locales: (process.env.LANGUAGELIST || 'en,de').split(','),
+    locales: (process.env.LANGUAGELIST || 'de,en').split(','),
     defaultLocale: nuxtI18nOptions.defaultLocale,
     exclude: [
       '/search',
@@ -281,10 +280,10 @@ export default defineNuxtConfig({
       cleanupOutdatedCaches: true,
     },
     manifest: {
-      name: process.env.NUXT_PUBLIC_OG_TITLE || process.env.OG_TITLE || 'PlentyONE Shop',
-      short_name: process.env.NUXT_PUBLIC_OG_TITLE || process.env.OG_TITLE || 'PlentyONE Shop',
-      description: process.env.NUXT_PUBLIC_META_DESCRIPTION || process.env.METADESC || 'PlentyONE Shop',
-      theme_color: process.env.NUXT_PUBLIC_PRIMARY_COLOR || '#062633',
+      name: process.env.NUXT_PUBLIC_OG_TITLE || process.env.OG_TITLE || 'Ovatics Shop',
+      short_name: process.env.NUXT_PUBLIC_OG_TITLE || process.env.OG_TITLE || 'Ovatics Shop',
+      description: process.env.NUXT_PUBLIC_META_DESCRIPTION || process.env.METADESC || 'Ovatics Shop',
+      theme_color: process.env.NUXT_PUBLIC_PRIMARY_COLOR || '#202D89',
       background_color: '#ffffff',
       display: 'standalone',
       start_url: '/',
