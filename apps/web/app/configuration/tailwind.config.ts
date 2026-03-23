@@ -3,7 +3,9 @@ import { tailwindConfig } from '@storefront-ui/vue/tailwind-config';
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
-const fontFamilyText = process.env.NUXT_PUBLIC_FONT || 'Red Hat Text';
+// Ovatics Brand – Corporate Identity
+// Primary: Ovatics Blau #202D89 | Secondary: Ovatics Rot #DA0813
+const fontFamilyText = process.env.NUXT_PUBLIC_FONT || 'Gilroy';
 
 export default {
   presets: [tailwindConfig],
@@ -45,12 +47,12 @@ export default {
         },
       }),
       fontFamily: {
-        body: [`${fontFamilyText}`, ...defaultTheme.fontFamily.sans],
-        editor: ['Red Hat Text', ...defaultTheme.fontFamily.sans],
+        body: [`${fontFamilyText}`, 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', ...defaultTheme.fontFamily.sans],
+        editor: ['Gilroy', 'Lato', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
-          '50': 'rgb(var(--colors-2-primary-50) / <alpha-value>)',
+          '50':  'rgb(var(--colors-2-primary-50) / <alpha-value>)',
           '100': 'rgb(var(--colors-2-primary-100) / <alpha-value>)',
           '200': 'rgb(var(--colors-2-primary-200) / <alpha-value>)',
           '300': 'rgb(var(--colors-2-primary-300) / <alpha-value>)',
@@ -63,7 +65,7 @@ export default {
           '950': 'rgb(var(--colors-2-primary-950) / <alpha-value>)',
         },
         secondary: {
-          '50': 'rgb(var(--colors-2-secondary-50) / <alpha-value>)',
+          '50':  'rgb(var(--colors-2-secondary-50) / <alpha-value>)',
           '100': 'rgb(var(--colors-2-secondary-100) / <alpha-value>)',
           '200': 'rgb(var(--colors-2-secondary-200) / <alpha-value>)',
           '300': 'rgb(var(--colors-2-secondary-300) / <alpha-value>)',
@@ -75,6 +77,15 @@ export default {
           '900': 'rgb(var(--colors-2-secondary-900) / <alpha-value>)',
           '950': 'rgb(var(--colors-2-secondary-950) / <alpha-value>)',
         },
+        // Ovatics Brand Colors
+        ovatics: {
+          rot:    '#DA0813',
+          orange: '#E1580A',
+          gelb:   '#FAD508',
+          gruen:  '#099437',
+          blau:   '#202D89',
+          lila:   '#853089',
+        },
         editor: {
           'body-bg': '#F1F3F5',
           button: '#062633',
@@ -82,9 +93,8 @@ export default {
           'toc-selected': '#538AEA',
           'icon-hover': 'rgba(6, 38, 51, 0.08)',
         },
-
         header: {
-          '50': 'rgb(var(--colors-2-header-50) / <alpha-value>)',
+          '50':  'rgb(var(--colors-2-header-50) / <alpha-value>)',
           '100': 'rgb(var(--colors-2-header-100) / <alpha-value>)',
           '200': 'rgb(var(--colors-2-header-200) / <alpha-value>)',
           '300': 'rgb(var(--colors-2-header-300) / <alpha-value>)',
