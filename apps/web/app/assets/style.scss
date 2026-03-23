@@ -1,172 +1,63 @@
-/* ============================================
-   Ovatics Brand – Corporate Identity
-   Farben gemaess CI-Dokument v4 (14.03.2026)
-   Font: Gilroy Bold (Headlines) / Gilroy Medium (Body)
-   Fallback: Lato -> Helvetica Neue -> Helvetica -> Arial -> sans-serif
-   ============================================ */
+/* ==============================================
+    Ovatics Brand - Corporate Identity
+    Farben gemaess CI-Dokument v4 (14.03.2026)
+    Font: Gilroy Bold (Headlines) / Gilroy Medium (Body)
+    Fallback: Lato -> Helvetica Neue -> Helvetica -> Arial -> sans-serif
+    ============================================== */
 
 /* Gilroy Web Font einbinden
-   Hinweis: Gilroy-Schriftdateien (Gilroy-Bold.ttf, Gilroy-Medium.ttf)
-   muessen als /public/fonts/gilroy/ bereitgestellt werden.
-   Alternativ koennen die Dateien aus O:\Brand - Logo - Schriftart\Schriftart Gilroy\
-   ins Verzeichnis apps/web/public/fonts/gilroy/ kopiert werden. */
+    Hinweis: Gilroy-Schriftdateien (Gilroy-Bold.ttf/.woff2, Gilroy-Medium.ttf/.woff2)
+    muessen als /public/fonts/gilroy/ bereitgestellt werden. */
 @font-face {
   font-family: 'Gilroy';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-    src: url('/fonts/gilroy/Gilroy-Bold.ttf') format('truetype');
-   }
+  src: url('/fonts/gilroy/Gilroy-Bold.woff2') format('woff2'),
+       url('/fonts/gilroy/Gilroy-Bold.ttf') format('truetype');
+}
 
 @font-face {
   font-family: 'Gilroy';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-    src: url('/fonts/gilroy/Gilroy-Medium.ttf') format('truetype');
-   }
+  src: url('/fonts/gilroy/Gilroy-Medium.woff2') format('woff2'),
+       url('/fonts/gilroy/Gilroy-Medium.ttf') format('truetype');
+}
 
 /* Lato als Web-Fallback (Google Fonts CDN) */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 /* Ovatics CSS Custom Properties (Farbpalette)
-   Primary:   Ovatics Blau  #202D89
-   Secondary: Ovatics Rot   #DA0813 */
+    Primary:   Ovatics Blau  #202D89
+    Secondary: Ovatics Rot   #DA0813 */
 :root {
   /* Ovatics Blau Palette (Primary) */
   --colors-2-primary-50:  238 240 251;
-  --colors-2-primary-100: 210 214 245;
-  --colors-2-primary-200: 165 173 234;
-  --colors-2-primary-300: 120 133 223;
-  --colors-2-primary-400: 75 92 212;
-  --colors-2-primary-500: 32 45 137;
-  --colors-2-primary-600: 26 37 112;
-  --colors-2-primary-700: 20 29 86;
-  --colors-2-primary-800: 13 18 60;
-  --colors-2-primary-900: 7 9 34;
-  --colors-2-primary-950: 4 5 19;
+  --colors-2-primary-100: 210 214 243;
+  --colors-2-primary-200: 175 182 232;
+  --colors-2-primary-300: 134 145 218;
+  --colors-2-primary-400: 100 113 207;
+  --colors-2-primary-500: 66 81 196;
+  --colors-2-primary-600: 52 67 171;
+  --colors-2-primary-700: 32 45 137;
+  --colors-2-primary-800: 22 32 103;
+  --colors-2-primary-900: 13 19 69;
 
   /* Ovatics Rot Palette (Secondary) */
-  --colors-2-secondary-50:  253 234 235;
-  --colors-2-secondary-100: 249 192 194;
-  --colors-2-secondary-200: 241 135 138;
-  --colors-2-secondary-300: 232 82 86;
-  --colors-2-secondary-400: 218 34 38;
+  --colors-2-secondary-50:  253 232 233;
+  --colors-2-secondary-100: 249 194 197;
+  --colors-2-secondary-200: 244 145 150;
+  --colors-2-secondary-300: 237 90 97;
+  --colors-2-secondary-400: 232 47 55;
   --colors-2-secondary-500: 218 8 19;
-  --colors-2-secondary-600: 178 6 16;
-  --colors-2-secondary-700: 137 5 12;
-  --colors-2-secondary-800: 97 3 8;
-  --colors-2-secondary-900: 56 2 5;
-  --colors-2-secondary-950: 35 1 3;
+  --colors-2-secondary-600: 191 7 17;
+  --colors-2-secondary-700: 157 5 13;
+  --colors-2-secondary-800: 123 4 10;
+  --colors-2-secondary-900: 82 2 7;
 
-  /* Header: Ovatics Fast-Schwarz #1A1A1A Palette */
-  --colors-2-header-50:  240 240 240;
-  --colors-2-header-100: 214 214 214;
-  --colors-2-header-200: 173 173 173;
-  --colors-2-header-300: 133 133 133;
-  --colors-2-header-400: 92 92 92;
-  --colors-2-header-500: 51 51 51;
-  --colors-2-header-600: 42 42 42;
-  --colors-2-header-700: 32 32 32;
-  --colors-2-header-800: 21 21 21;
-  --colors-2-header-900: 10 10 10;
-  --colors-2-header-950: 5 5 5;
-
-  /* Ovatics Markenfarben als CSS-Variablen */
-  --ovatics-rot:    218 8 19;
-  --ovatics-orange: 225 88 10;
-  --ovatics-gelb:   250 213 8;
-  --ovatics-gruen:  9 148 55;
-  --ovatics-blau:   32 45 137;
-  --ovatics-lila:   133 48 137;
-
-  /* Neutrale Farben */
-  --ovatics-schwarz: 26 26 26;
-  --ovatics-dunkelgrau: 85 85 85;
-  --ovatics-mittelgrau: 204 204 204;
-  --ovatics-hellgrau: 245 245 245;
-}
-
-.scrollbar-hidden {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    @apply hidden;
-  }
-}
-.grid-areas-product-page {
-  grid-template-areas: 'left-top right' 'left-bottom right';
-}
-.scrollbar-thin::-webkit-scrollbar {
-  width: 8px;
-}
-.scrollbar-thin::-webkit-scrollbar-thumb {
-  background-color: #cccccc;
-  border-radius: 8px;
-}
-.scrollbar-thin::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-}
-
-@media (min-width: 1024px) {
-  .padding-right-desktop {
-    padding-right: 3.1rem;
-  }
-}
-.variation-properties {
-  a {
-    color: rgb(var(--colors-2-primary-700));
-  }
-}
-
-apple-pay-button {
-  --apple-pay-button-width: 100%;
-  --apple-pay-button-height: 50px;
-  --apple-pay-button-border-radius: 7px;
-  --apple-pay-button-box-sizing: border-box;
-}
-
-#google-pay-button {
-  div {
-    button {
-      width: 100% !important;
-      display: block;
-    }
-  }
-}
-
-.no-preflight {
-  :not(iframe) {
-    all: revert;
-  }
-
-  h1 {
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    margin: 0.67em 0;
-    padding: 0;
-    line-height: 1.2;
-    color: inherit;
-    text-align: left;
-    white-space: normal;
-  }
-
-  img,
-  video {
-    height: auto;
-    max-width: 100%;
-  }
-
-  audio,
-  canvas,
-  embed,
-  iframe,
-  img,
-  object,
-  svg,
-  video {
-    display: block;
-    vertical-align: middle;
-  }
+  /* Typography */
+  --font-family-heading: 'Gilroy', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-body: 'Gilroy', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
