@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   srcDir: 'app/',
   telemetry: false,
   devtools: { enabled: true },
-  css: ['~/assets/richtext.css'],
+    css: ['~/assets/richtext.css', '~/assets/style.scss'],
   typescript: {
     typeCheck: true,
   },
