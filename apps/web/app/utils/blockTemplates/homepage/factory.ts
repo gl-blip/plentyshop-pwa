@@ -37,11 +37,9 @@ export function createHomepage(): Block[] {
   const fashionLinkText = t('defaultTemplate.homepage.productRecommended.fashion.linkText');
   const fashionLinkUrl = t('defaultTemplate.homepage.productRecommended.fashion.linkUrl');
   const fashionDescription = `<a class='underline' href='${fashionLinkUrl}'>${fashionLinkText}</a>`;
-  const newsletterTitle = t('defaultTemplate.homepage.newsletter.title');
-  const newsletterDescription = t('defaultTemplate.homepage.newsletter.description');
-  const newsletterButtonLabel = t('defaultTemplate.homepage.newsletter.buttonLabel');
 
   return [
+    // Hero Banner Carousel with gradient backgrounds
     {
       name: 'Carousel',
       type: 'structure',
@@ -51,7 +49,7 @@ export function createHomepage(): Block[] {
       configuration: {
         controls: {
           displayArrows: true,
-          color: '#a39f9f',
+          color: '#ffffff',
         },
       },
       content: [
@@ -64,28 +62,28 @@ export function createHomepage(): Block[] {
           },
           content: {
             image: {
-              wideScreen: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/Test_Banner_Person/guy-1024.avif',
-              desktop: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/Test_Banner_Person/guy-1024.avif',
-              tablet: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/Test_Banner_Person/guy-768.avif',
-              mobile: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/Test_Banner_Person/guy-320.avif',
-              alt: '',
-              brightness: 0.5,
+              wideScreen: '/images/banner-gradient.png',
+              desktop: '/images/banner-gradient.png',
+              tablet: '/images/banner-gradient.png',
+              mobile: '/images/banner-gradient.png',
+              alt: 'Ovatics – Vielfalt entdecken',
+              brightness: 1,
             },
             text: {
-              color: '#000',
-              bgcolor: '#fff',
-              bgopacity: 0.9,
+              color: '#fff',
+              bgcolor: '#1A1A1A',
+              bgopacity: 0.7,
               pretitle: banner1Pretitle,
               title: banner1Title,
               htmlDescription: banner1Description,
-              textAlignment: 'left',
-              justify: 'top',
-              align: 'left',
+              textAlignment: 'center',
+              justify: 'center',
+              align: 'center',
               background: true,
             },
             button: {
               label: banner1ButtonLabel,
-              link: '/gear/headphones-capybara_157',
+              link: '/',
               variant: 'primary',
             },
           },
@@ -99,34 +97,36 @@ export function createHomepage(): Block[] {
           },
           content: {
             image: {
-              wideScreen: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/Test_Banner_Drone/drone-A-1024.avif',
-              desktop: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/Test_Banner_Drone/drone-A-1024.avif',
-              tablet: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/Test_Banner_Drone/drone-A-768.avif',
-              mobile: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/Test_Banner_Drone/drone-A-320.avif',
-              alt: '',
-              brightness: 0.75,
+              wideScreen: '/images/banner-gradient2.png',
+              desktop: '/images/banner-gradient2.png',
+              tablet: '/images/banner-gradient2.png',
+              mobile: '/images/banner-gradient2.png',
+              alt: 'Ovatics – Premium Champagner & Spirits',
+              brightness: 1,
             },
             text: {
-              color: '#000',
-              bgcolor: '#fff',
-              bgopacity: 1,
+              color: '#fff',
+              bgcolor: '#202D89',
+              bgopacity: 0.7,
               pretitle: banner2Pretitle,
               title: banner2Title,
               htmlDescription: banner2Description,
-              textAlignment: 'left',
-              justify: 'top',
-              align: 'left',
+              textAlignment: 'center',
+              justify: 'center',
+              align: 'center',
               background: true,
             },
             button: {
               label: banner2ButtonLabel,
-              link: '/gear/drone-omega_154',
+              link: '/champagner',
               variant: 'primary',
             },
           },
         },
       ],
     },
+
+    // Welcome / Mission Statement
     {
       name: 'TextCard',
       type: 'content',
@@ -150,23 +150,8 @@ export function createHomepage(): Block[] {
         },
       },
     },
-    {
-      name: 'ProductRecommendedProducts',
-      type: 'content',
-      meta: {
-        uuid: uuid(),
-        isGlobalTemplate: false,
-      },
-      content: {
-        categoryId: '73',
-        text: {
-          pretitle: '',
-          title: '',
-          subtitle: '',
-          htmlDescription: '',
-        },
-      },
-    },
+
+    // Baby & Familie – Stock photo + text
     {
       name: 'MultiGrid',
       type: 'structure',
@@ -187,10 +172,10 @@ export function createHomepage(): Block[] {
           parent_slot: 0,
           content: {
             image: {
-              wideScreen: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/headphones-mediacard.avif',
-              desktop: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/headphones-mediacard.avif',
-              tablet: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/headphones-mediacard.avif',
-              mobile: 'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/headphones-mediacard.avif',
+              wideScreen: '/images/stock-baby-family.jpg',
+              desktop: '/images/stock-baby-family.jpg',
+              tablet: '/images/stock-baby-family.jpg',
+              mobile: '/images/stock-baby-family.jpg',
               alt: multigridImageAlt,
               imageAlignment: 'left',
             },
@@ -230,59 +215,88 @@ export function createHomepage(): Block[] {
             },
             button: {
               label: multigridButtonLabel,
-              link: '/gear/headphones-capybara_157',
+              link: '/baby',
               variant: 'primary',
             },
           },
         },
       ],
     },
+
+    // Genuss & Lifestyle – Stock photo + text (reversed layout)
     {
-      name: 'ProductRecommendedProducts',
-      type: 'content',
+      name: 'MultiGrid',
+      type: 'structure',
       meta: {
         uuid: uuid(),
         isGlobalTemplate: false,
       },
-      content: {
-        text: {
-          pretitle: fashionPretitle,
-          title: fashionTitle,
-          subtitle: fashionSubtitle,
-          htmlDescription: fashionDescription,
-        },
-        source: {
-          type: 'category',
-          itemId: '',
-          categoryId: '',
-        },
+      configuration: {
+        columnWidths: [6, 6],
       },
+      content: [
+        {
+          name: 'TextCard',
+          type: 'content',
+          meta: {
+            uuid: uuid(),
+          },
+          parent_slot: 0,
+          content: {
+            text: {
+              htmlDescription: fashionDescription,
+              pretitle: fashionPretitle,
+              title: fashionTitle,
+              subtitle: fashionSubtitle,
+              textAlignment: 'left',
+              color: '#000',
+            },
+            button: {
+              label: banner2ButtonLabel,
+              link: '/champagner',
+              variant: 'primary',
+            },
+          },
+        },
+        {
+          name: 'Image',
+          type: 'content',
+          meta: {
+            uuid: uuid(),
+          },
+          parent_slot: 1,
+          content: {
+            image: {
+              wideScreen: '/images/stock-champagne.jpg',
+              desktop: '/images/stock-champagne.jpg',
+              tablet: '/images/stock-champagne.jpg',
+              mobile: '/images/stock-champagne.jpg',
+              alt: 'Champagner, Spirits & Genuss bei Ovatics',
+              imageAlignment: 'right',
+            },
+            text: {
+              textOverlay: '',
+              textOverlayColor: '',
+              textOverlayAlignY: 'center',
+              textOverlayAlignX: 'center',
+            },
+            button: {
+              label: '',
+              link: '',
+              variant: 'primary',
+            },
+            layout: {
+              paddingTop: 0,
+              paddingBottom: 0,
+              paddingLeft: 0,
+              paddingRight: 0,
+            },
+          },
+        },
+      ],
     },
-    {
-      name: 'NewsletterSubscribe',
-      type: 'content',
-      meta: {
-        uuid: uuid(),
-        isGlobalTemplate: false,
-      },
-      content: {
-        text: {
-          bgColor: '#f5f5f5',
-          title: newsletterTitle,
-          htmlDescription: newsletterDescription,
-        },
-        input: {
-          displayNameInput: true,
-          nameIsRequired: false,
-        },
-        button: {
-          label: newsletterButtonLabel,
-        },
-        settings: {
-          emailFolderId: 1,
-        },
-      },
-    },
+
+    // Footer (no newsletter)
     createFooter(),
   ];
 }

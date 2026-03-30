@@ -39,9 +39,9 @@ export default defineNuxtPlugin({
       const { getSetting: getSecondaryColor } = useSiteSettings('secondaryColor');
       const { getSetting: getHeaderBackgroundColor } = useSiteSettings('headerBackgroundColor');
 
-      const primaryColor = getPrimaryColor() || '#062633';
-      const secondaryColor = getSecondaryColor() || '#31687d';
-      const headerColor = getHeaderBackgroundColor() || primaryColor || '#062633';
+      const primaryColor = getPrimaryColor() || '#202D89';
+      const secondaryColor = getSecondaryColor() || '#DA0813';
+      const headerColor = getHeaderBackgroundColor() || primaryColor || '#202D89';
       const primaryPalette = buildPalette('primary', primaryColor);
       const secondaryPalette = buildPalette('secondary', secondaryColor);
       const headerPalette = buildPalette('header', headerColor);

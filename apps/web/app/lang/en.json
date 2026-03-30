@@ -487,7 +487,7 @@
         },
         "consentCookie": {
           "name": "consent-cookie",
-          "provider": "PlentyONE GmbH",
+          "provider": "Ovatics GmbH",
           "status": "Stores consent selection."
         },
         "payPal": {
@@ -497,7 +497,7 @@
         },
         "plentyId": {
           "name": "plentyID",
-          "provider": "PlentyONE GmbH",
+          "provider": "Ovatics GmbH",
           "status": "Stores information about the current session, for example if the user is logged in."
         }
       },
@@ -1300,50 +1300,50 @@
     "homepage": {
       "carousel": {
         "banner1": {
-          "pretitle": "Feel the music",
-          "title": "Your Sound, Elevated",
-          "description": "Immerse yourself in rich, crystal-clear audio with our cutting-edge headphones. Designed for the ultimate listening experience, whether you're a casual listener or an audiophile. Discover the perfect blend of style, comfort, and sound quality that elevates your music to new heights.",
-          "buttonLabel": "Discover Capybara"
+          "pretitle": "Discover Diversity",
+          "title": "Welcome to Ovatics",
+          "description": "From baby food to champagne, from personal care to spirits. Ovatics brings diversity to your everyday life with selected premium products.",
+          "buttonLabel": "Explore Products"
         },
         "banner2": {
-          "pretitle": "The Future of Aerial Photography",
-          "title": "Drone Omega",
-          "description": "A lightweight drone designed for stunning aerial footage. With a high-resolution camera on a 3-axis gimbal and up to 45 minutes of flight time, it's perfect for capturing smooth, stable video. Featuring GPS-assisted hover, obstacle avoidance, and easy portability, the Drone brings innovation and simplicity to your aerial shots.",
-          "buttonLabel": "Discover Omega"
+          "pretitle": "For Every Occasion",
+          "title": "Premium Champagne & Spirits",
+          "description": "Discover our exclusive selection of champagne from Pol Roger, Ruinart, Dom Perignon and many other renowned houses. Plus fine spirits for special moments.",
+          "buttonLabel": "Discover Champagne"
         }
       },
       "textcard": {
         "welcome": {
-          "pretitle": "Welcome to your new favorite shop",
-          "title": "Discover Tech & Style",
-          "subtitle": "Innovative technology meets modern fashion",
-          "paragraph1": "Welcome to our shop, where tech enthusiasts and fashion lovers alike will find exactly what they're looking for! From premium headphones and high-performance drones to stylish clothing, we offer everything to make your life smarter and your style unique.",
-          "paragraph2": "Our mission is to provide you with a carefully curated selection of products that combine quality, innovation, and design. Whether you're in search of a new speaker for perfect sound or a casual hoodie to complete your look – we've got you covered.",
-          "buttonLabel": "Get shopping"
+          "pretitle": "Ovatics GmbH",
+          "title": "Diversity. Quality. Trust.",
+          "subtitle": "Your online shop for selected products",
+          "paragraph1": "Welcome to Ovatics – your partner for a diverse range of selected products. From high-quality baby food and personal care products to the finest champagne and spirits, toys and household products.",
+          "paragraph2": "We stand for quality, personal service and fast delivery. Explore our range and see for yourself.",
+          "buttonLabel": "All Categories"
         }
       },
       "multigrid": {
         "textcard": {
-          "title": "A New Listening Experience",
-          "subtitle": "Innovative technology meets modern fashion",
-          "paragraph": "Our headphone collection sets new standards in audio precision. With deep bass, crystal-clear highs, and an impressive soundstage, these headphones deliver a unique listening experience for every music genre. Combining modern design, maximum comfort, and cutting-edge technology, they are the perfect choice for anyone who refuses to compromise on sound quality.",
-          "feature1": "Premium, studio-quality sound",
-          "feature2": "Comfortable fit for extended listening",
-          "feature3": "Long-lasting battery life",
-          "feature4": "Seamless wireless connectivity",
-          "buttonLabel": "To our headphones"
+          "title": "Baby & Family",
+          "subtitle": "Everything for little ones and the whole family",
+          "paragraph": "From trusted baby food from leading manufacturers to personal care products and toys – at Ovatics you'll find everything families need. Quality and safety are our top priorities.",
+          "feature1": "Baby food from leading brands",
+          "feature2": "High-quality care products",
+          "feature3": "Selected toys",
+          "feature4": "Fast, reliable shipping",
+          "buttonLabel": "Explore Baby Products"
         },
         "image": {
-          "alt": "Headphones"
+          "alt": "Baby & Family at Ovatics"
         }
       },
       "productRecommended": {
         "fashion": {
-          "pretitle": "More than just technology",
-          "title": "Discover our fashion collection",
-          "subtitle": "Sporty fashion and accessories for everyone.",
-          "linkText": "To our full collection.",
-          "linkUrl": "https://plentyshop.plentymarkets.com/wear"
+          "pretitle": "Indulgence & Lifestyle",
+          "title": "Champagne, Spirits & more",
+          "subtitle": "Exclusive drinks for special moments.",
+          "linkText": "Discover all Champagne & Spirits.",
+          "linkUrl": "/champagner"
         }
       },
       "newsletter": {

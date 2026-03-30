@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     asyncContext: true,
   },
   appConfig: {
-    titleSuffix: process.env.NAME || 'Ovatics Shop',
+    titleSuffix: process.env.NAME || 'Ovatics GmbH',
     fallbackCurrency: 'EUR',
   },
   imports: {
@@ -183,10 +183,10 @@ export default defineNuxtConfig({
     ],
   },
   shopCore: {
-    apiUrl: validateApiUrl(process.env.API_URL) ?? 'http://localhost:8181',
+    apiUrl: validateApiUrl(process.env.MIDDLEWARE_URL) ?? validateApiUrl(process.env.API_URL) ?? 'http://localhost:8181',
     apiEndpoint: process.env.API_ENDPOINT,
     configId: Number(process.env.CONFIG_ID) || 1,
-    middlewareSSRUrl: 'http://localhost:8181',
+    middlewareSSRUrl: process.env.MIDDLEWARE_URL ?? 'http://localhost:8181',
   },
   shopModuleMollie: {
     checkoutUrl: paths.checkout,
@@ -280,9 +280,9 @@ export default defineNuxtConfig({
       cleanupOutdatedCaches: true,
     },
     manifest: {
-      name: process.env.NUXT_PUBLIC_OG_TITLE || process.env.OG_TITLE || 'Ovatics Shop',
+      name: process.env.NUXT_PUBLIC_OG_TITLE || process.env.OG_TITLE || 'Ovatics \u2013 Vielfalt. Qualit\u00e4t. Vertrauen.',
       short_name: process.env.NUXT_PUBLIC_OG_TITLE || process.env.OG_TITLE || 'Ovatics Shop',
-      description: process.env.NUXT_PUBLIC_META_DESCRIPTION || process.env.METADESC || 'Ovatics Shop',
+      description: process.env.NUXT_PUBLIC_META_DESCRIPTION || process.env.METADESC || 'Ovatics Online-Shop f\u00fcr ausgew\u00e4hlte Produkte',
       theme_color: process.env.NUXT_PUBLIC_PRIMARY_COLOR || '#202D89',
       background_color: '#ffffff',
       display: 'standalone',
