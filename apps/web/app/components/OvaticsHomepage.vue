@@ -10,17 +10,17 @@
         <div class="hero-grid-pattern" />
       </div>
       <div class="hero-content">
-        <span class="hero-badge anim anim-fade">Willkommen bei Ovatics</span>
+        <span class="hero-badge">Willkommen bei Ovatics</span>
         <h1 class="hero-title">
-          <span class="hero-line anim anim-up" style="--d:0.10s">Vielfalt.</span>
-          <span class="hero-line hero-line--mid anim anim-up" style="--d:0.22s">Qualität.</span>
-          <span class="hero-line hero-line--dim anim anim-up" style="--d:0.34s">Vertrauen.</span>
+          <span class="hero-line">Vielfalt.</span>
+          <span class="hero-line hero-line--mid">Qualität.</span>
+          <span class="hero-line hero-line--dim">Vertrauen.</span>
         </h1>
-        <p class="hero-sub anim anim-up" style="--d:0.46s">
+        <p class="hero-sub">
           Ausgewählte Produkte für jeden Moment des Lebens –<br class="hero-br" />
           von Baby &amp; Familie bis Premium-Champagner.
         </p>
-        <div class="hero-actions anim anim-up" style="--d:0.58s">
+        <div class="hero-actions">
           <NuxtLink to="/baby" class="btn-primary">Sortiment entdecken</NuxtLink>
           <NuxtLink to="/champagner" class="btn-ghost">Champagner &amp; Spirits</NuxtLink>
         </div>
@@ -184,6 +184,8 @@ const trustItems = [
 let io: IntersectionObserver | null = null;
 
 onMounted(() => {
+  const animEls = document.querySelectorAll('.anim');
+
   io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -196,9 +198,14 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0.1 },
+    { threshold: 0.05, rootMargin: '0px 0px 200px 0px' },
   );
-  document.querySelectorAll('.anim').forEach((el) => io?.observe(el));
+  animEls.forEach((el) => io?.observe(el));
+
+  // Fallback: make everything visible after 1.5s regardless
+  setTimeout(() => {
+    animEls.forEach((el) => el.classList.add('visible'));
+  }, 1500);
 });
 
 onUnmounted(() => io?.disconnect());
