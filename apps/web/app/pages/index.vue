@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <EditableBlocks :identifier="'index'" :type="'immutable'" />
-  </div>
+  <OvaticsHomepage />
 </template>
 
 <script lang="ts" setup>

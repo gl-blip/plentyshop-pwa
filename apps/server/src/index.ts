@@ -41,7 +41,7 @@ const validateApiUrl = (url: string | undefined): string | undefined => {
   );
 
   const host = useIPV6 ? '::' : '0.0.0.0';
-  const port = Number(process.argv[3]) || 8181;
+  const port = Number(process.env.MIDDLEWARE_PORT) || Number(process.argv[3]) || 8181;
 
   checkEnvironments(config.integrations);
 
